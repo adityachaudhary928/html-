@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+header {
+    background-color: lightseagreen;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+}
+
+.header-icons {
+    position: absolute;
+    top: 11px;
+    left: 11px;
+}
+
+.header-icon {
+    color: #000000;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 1rem;
+    align-items: center;
+}
+
+.header-icon i {
+    margin-right: 5px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.search-form label {
+    margin: 5px 10px 5px 0;
+}
+
+.search-form select,
+.search-form input[type="date"] {
+    padding: 10px;
+    margin: 5px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    /* Set a fixed width for date input */
+}
+
+.search-form .dates {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1rem;
+    background-color: #f1545f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #d43f4b;
+}
+
+footer {
+    background-color: lightseagreen;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

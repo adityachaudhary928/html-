@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tripbnb</title>
+    <link rel="stylesheet" href="d1.css">
+    <!-- Include Boxicons CSS for the icons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons/css/boxicons.min.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="logo"><i class='bx bxl-slack'></i> Tripbnb</h1>
+        <form action="#" method="GET" class="search-form">
+            <label for="location">Enter a location in India:</label>
+            <select id="location" name="location" required>
+                    <option value="" disabled selected></option>
+                    <option value="Goa">Goa</option>
+                    <option value="Jaipur">Jaipur</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Manali">Manali</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Agra">Agra</option>
+                </select>
+            <div class="dates">
+                <label for="check-in">Check-in:</label>
+                <input type="date" id="check-in" name="check-in" required>
+                <label for="check-out">Check-out:</label>
+                <input type="date" id="check-out" name="check-out" required>
+            </div>
+            <button type="submit">Search</button>
+        </form>
+        </div>
+    </header>
+
+    <main>
+        <!-- Content section can go here -->
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Airbnb India. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript to restrict past dates for check-in
+        document.getElementById('check-in').addEventListener('input', function() {
+            var today = new Date();
+            today.setHours(0, 0, 0, 0); // Set to the beginning of today to avoid time comparison issues
+            var selectedDate = new Date(this.value);
+
+            if (selectedDate <= today) {
+                this.value = ''; // Clear the input field if the date is in the past
+                alert('Please select a future date for check-in.');
+            }
+        });
+        document.getElementById('check-out').addEventListener('input', function() {
+            var checkIn = new Date(document.getElementById('check-in').value);
+            var selectedDate = new Date(this.value);
+
+            if (selectedDate <= checkIn) {
+                this.value = ''; // Clear the input field if the date is before or same as check-in
+                alert('Please select a date after the check-in date for check-out.');
+            }
+        });
+    </script>
+</body>
+
+</html>
